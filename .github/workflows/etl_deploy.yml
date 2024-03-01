@@ -1,0 +1,12 @@
+name: Simple ETL Deployment
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+jobs:
+  etl-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run ETL deployment
+        run: echo ETL deploy started
